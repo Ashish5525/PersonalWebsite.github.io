@@ -236,26 +236,38 @@ body {
   cursor: pointer;
   width: 100%;
   text-align: left;
+  border-radius: 10px; /* Optional: round the edges of the button */
 }
 
 .dropdown-content {
   display: none;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
-  background: transparent; /* Set the background color to transparent */
-  color: var(--background); /* Match the text color with the background color */
+  background: var(--background); /* Set the background color to match the window color */
+  color: var(--primary); /* Set the text color */
+  border-radius: 10px; /* Optional: round the edges of the dropdown content */
 }
 
 .dropdown-content > div,
 .dropdown-content > article {
   padding: 1em;
-  border-top: 1px solid var(--background); /* Match the border color with the background color */
+  border-top: 1px solid var(--primary); /* Match the border color with the primary color */
 }
 
+/* Optional: adjust dropdown content padding and margin */
+.dropdown-content > div,
+.dropdown-content > article {
+  padding: 1em;
+  margin: 1em 0;
+}
+
+/* Show the dropdown content when active */
 .dropdown-content.show {
   display: block;
   max-height: 1000px; /* Arbitrary high value to ensure full expansion */
+  overflow-y: auto; /* Make content scrollable if it exceeds max height */
 }
+
 
 /* Optional: style for animation */
 @keyframes slideDown {
