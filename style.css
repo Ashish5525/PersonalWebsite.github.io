@@ -223,6 +223,7 @@ body {
 /* Existing styles here */
 
 /* Dropdown styles */
+/* Dropdown styles */
 .dropdown-btn {
   display: flex;
   justify-content: space-between;
@@ -241,7 +242,7 @@ body {
   display: none;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
-  background: var(--primary); /* Match the background color with the primary color */
+  background: transparent; /* Set the background color to transparent */
   color: var(--background); /* Match the text color with the background color */
 }
 
@@ -250,6 +251,7 @@ body {
   padding: 1em;
   border-top: 1px solid var(--background); /* Match the border color with the background color */
 }
+
 .dropdown-content.show {
   display: block;
   max-height: 1000px; /* Arbitrary high value to ensure full expansion */
