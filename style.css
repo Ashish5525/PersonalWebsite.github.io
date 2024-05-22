@@ -51,6 +51,10 @@ body {
   section {
     border-block-end: 1px solid var(--primary);
   }
+
+  .certification div {
+  margin-bottom: 20px; /* Adjust the value as needed */
+  }
   
   header nav {
     display: flex;
