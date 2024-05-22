@@ -19,4 +19,22 @@ class CssPropControl {
     bodyCssProps.set('--primary', bodyCssProps.get(`--${mode}-primary`))
     bodyCssProps.set('--link', bodyCssProps.get(`--${mode}-link`))
   })
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+
+  dropdownButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const dropdownContent = this.nextElementSibling;
+      if (dropdownContent.classList.contains('show')) {
+        dropdownContent.classList.remove('show');
+        dropdownContent.style.maxHeight = null;
+      } else {
+        dropdownContent.classList.add('show');
+        dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
+      }
+    });
+  });
+});
+
   
