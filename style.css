@@ -219,4 +219,52 @@ body {
     align-items: center;
     font-size: 1.5rem;
   }
+
+/* Existing styles here */
+
+/* Dropdown styles */
+.dropdown-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  font-size: 1.2em;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.dropdown-content.show {
+  display: block;
+  max-height: 1000px; /* Arbitrary high value to ensure full expansion */
+}
+
+.dropdown-content > div, .dropdown-content > article {
+  padding: 1em;
+  border-top: 1px solid #ddd;
+}
+
+/* Optional: style for animation */
+@keyframes slideDown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 1000px; /* Arbitrary high value to ensure full expansion */
+  }
+}
+
+.dropdown-content.show {
+  animation: slideDown 0.5s ease-out forwards;
+}
+
   
