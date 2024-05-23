@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     bodyCssProps.set('--link', bodyCssProps.get(`--${mode}-link`));
   });
 
-  document.querySelectorAll('.dropdown-btn').forEach(button => {
+document.querySelectorAll('.dropdown-btn').forEach(button => {
   button.addEventListener('click', () => {
     const dropdownContent = button.nextElementSibling;
     const isActive = button.classList.contains('active');
@@ -45,6 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
       dropdownContent.classList.add('show');
       button.classList.add('active');
     }
-    });
   });
 });
+
