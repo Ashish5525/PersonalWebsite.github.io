@@ -24,19 +24,27 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   document.querySelectorAll('.dropdown-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const dropdownContent = button.nextElementSibling;
-      button.classList.toggle('active');
-      
-      if (dropdownContent.classList.contains('show')) {
-        dropdownContent.classList.remove('show');
-        dropdownContent.classList.add('hide');
-        dropdownContent.style.maxHeight = null;
-      } else {
-        dropdownContent.classList.remove('hide');
-        dropdownContent.classList.add('show');
-        dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
+  button.addEventListener('click', () => {
+    const dropdownContent = button.nextElementSibling;
+    const isActive = button.classList.contains('active');
+    
+    document.querySelectorAll('.dropdown-content').forEach(content => {
+      if (content !== dropdownContent) {
+        content.classList.remove('show');
+        content.classList.add('hide');
+        content.previousElementSibling.classList.remove('active');
       }
+    });
+
+    if (isActive) {
+      dropdownContent.classList.remove('show');
+      dropdownContent.classList.add('hide');
+      button.classList.remove('active');
+    } else {
+      dropdownContent.classList.remove('hide');
+      dropdownContent.classList.add('show');
+      button.classList.add('active');
+    }
     });
   });
 });
