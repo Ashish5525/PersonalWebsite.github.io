@@ -250,6 +250,12 @@ footer .link-icon {
   background: var(--background); /* Set the background color to match the window color */
   color: var(--primary); /* Set the text color */
   border-radius: 10px; /* Optional: round the edges of the dropdown content */
+  max-height: 0; /* Ensure max-height is 0 initially */
+}
+
+.dropdown-content.show {
+  display: block;
+  max-height: 1000px; /* Arbitrary high value to ensure full expansion */
 }
 
 .dropdown-content > div,
@@ -290,5 +296,4 @@ footer .link-icon {
 
 .dropdown-content.hide {
   animation: slideUp 0.5s ease-in forwards;
-  max-height: 0;
 }
