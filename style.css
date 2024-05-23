@@ -225,22 +225,19 @@ body {
 /* Existing styles here */
 
 /* Dropdown styles */
-/* Dropdown styles */
 .dropdown-btn {
- /* display: flex; */
-  display: inline-flex;
- /* justify-content: space-between;*/
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 1em;
   font-size: 1.2em;
   background: var(--link); /* Match the background color with the primary color */
   color: var(--background); /* Match the text color with the background color */
   border: none;
-  border-radius: 1.25rem;
   cursor: pointer;
   width: 100%;
   text-align: left;
-  border-radius: 1.25rem; /* Optional: round the edges of the button */
+  border-radius: 20px; /* Optional: round the edges of the button */
 }
 
 .dropdown-content {
