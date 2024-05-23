@@ -240,8 +240,6 @@ body {
   cursor: pointer;
   width: 100%;
   text-align: left;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
   border-radius: 1.25rem; /* Optional: round the edges of the button */
 }
 
