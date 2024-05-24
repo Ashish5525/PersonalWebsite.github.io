@@ -7,8 +7,7 @@ body {
     background: var(--background);
     max-width: 1024px;
     box-sizing: border-box;
-    transition: color 0.5s;
-    transition: background 0.5s;
+    transition: color 0.5s, background 0.5s;
   
     --dark-background: #253a52;
     --dark-primary: #FFFFE3;
@@ -21,166 +20,171 @@ body {
     --background: var(--light-background);
     --primary: var(--light-primary);
     --link: var(--light-link);
-  }
-  
-  a {
+}
+.spacer {
+  height: 25px; /* Adjust the value as needed */
+}
+hr {
+  border: none; /* Remove default border */
+  border-top: 3px solid ; /* Add a solid border at the top of the <hr> */
+  margin: 0; /* Remove default margins */
+}
+
+
+a {
     color: var(--link);
-  }
-  
-  h1,
-  h2,
-  h3 {
+}
+
+h1, h2, h3 {
     font-family: "Sora", sans-serif;
     font-weight: 700;
-  }
-  
-  h1 {
-    font-size: 1.5rem;
-  }
-  
-  h2 {
-    font-size: 3rem;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-  }
-  
-  /* separator bars */
-  nav,
-  section {
-    border-block-end: 1px solid var(--primary);
-  }
+}
 
-  .certification div {
-  margin-bottom: 20px; /* Adjust the value as needed */
-  }
-  
-  header nav {
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Separator bars */
+nav, section {
+    border-block-end: none;
+}
+
+.certification div {
+    margin-bottom: 20px;
+}
+
+header nav {
     display: flex;
     justify-content: space-between;
-  }
-  
-  header nav ul {
+}
+
+header nav ul {
     padding: 0;
     display: flex;
     align-items: center;
-  }
-  
-  header nav li {
+}
+
+header nav li {
     display: inline;
     margin-inline-start: 1rem;
     font-family: "Sora", sans-serif;
     font-weight: 700;
-  }
-  
-  header nav li a {
+}
+
+header nav li a {
     text-decoration: none;
     color: var(--primary);
-  }
-  
-  /* container for dark-mode toggle */
-  header .controls {
+}
+
+/* Container for dark-mode toggle */
+header .controls {
     display: flex;
     justify-content: end;
     padding: 1rem 0;
-  }
-  
-  .bio {
+}
+
+.bio {
     display: flex;
     align-items: center;
     padding-block-end: 4rem;
-  }
-  
-  .bio .profile-img {
+}
+
+.bio .profile-img {
     margin-inline-end: 4rem;
     width: 320px;
     min-width: 320px;
     background: #888;
     border-radius: 160px;
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
     .bio {
-      flex-direction: column;
+        flex-direction: column;
     }
     .bio .profile-img {
-      margin-inline-end: 0;
+        margin-inline-end: 0;
     }
-  }
-  
-  .bio h2 {
+}
+
+.bio h2 {
     margin-block-end: 0;
-  }
-  
-  .bio p {
+}
+
+.bio p {
     margin: 1.5rem 0;
-  }
-  
- 
-  .recent-work {
+}
+
+.recent-work {
     padding-block-end: 3rem;
-  }
-  
-  article {
+}
+
+article {
     display: flex;
     padding: 3rem 0;
-  }
-  
-  article strong {
+}
+
+article strong {
     font-style: italic;
     font-weight: 600;
-  }
-  
-  article h3 {
+}
+
+article h3 {
     margin-block-start: 0;
-  }
-  
-  article a {
+}
+
+article a {
     font-weight: 700;
     padding: 2rem 0;
-  }
-  
-  article li {
+}
+
+article li {
     margin-block-end: 0.5rem;
-  }
-  
-  article .article-img {
+}
+
+article .article-img {
     width: 512px;
     min-width: 512px;
     margin-inline-start: 4rem;
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
     article {
-      flex-direction: column;
+        flex-direction: column;
     }
     article .article-img {
-      width: 100%;
-      min-width: 100%;
-      margin-inline-start: 0;
-      margin-block-start: 2rem;
+        width: 100%;
+        min-width: 100%;
+        margin-inline-start: 0;
+        margin-block-start: 2rem;
     }
-  }
-  
-  footer {
+}
+
+footer {
     padding: 1rem 0;
     text-align: center;
-  }
-  
-  footer ul {
+}
+
+footer ul {
     padding: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-  
-  footer ul li {
+}
+
+footer ul li {
     display: inline;
     margin: 0 8%;
-  }
-  
-  footer a {
+}
+
+footer a {
     display: inline-flex;
     flex-direction: column;
     color: var(--primary);
@@ -188,13 +192,13 @@ body {
     font-family: "Sora", sans-serif;
     font-weight: 700;
     align-items: center;
-  }
-  
-  footer .copywright {
+}
+
+footer .copywright {
     margin: 3rem 0;
-  }
-  
-  footer .link-icon {
+}
+
+footer .link-icon {
     margin-block-start: 0.5rem;
     background: var(--link);
     color: var(--background);
@@ -205,9 +209,9 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-  }
+}
 
- a.btn {
+a.btn {
     display: inline-flex;
     align-items: center;
     background: var(--link);
@@ -219,67 +223,82 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 0.875rem;
-  }
-  
-
-/* Existing styles here */
+}
 
 /* Dropdown styles */
 .dropdown-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  font-size: 1.2em;
-  background: var(--link); /* Match the background color with the primary color */
-  color: var(--background); /* Match the text color with the background color */
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  border-radius: 30px; /* Optional: round the edges of the button */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    font-size: 1.2em;
+    background: var(--link);
+    color: var(--background);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 30px;
+    transition: background-color 0.3s;
 }
 
+.dropdown-btn:hover {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.dropdown-btn .arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-btn .arrow.down {
+    transform: rotate(0deg);
+}
+
+.dropdown-btn .arrow.up {
+    transform: rotate(180deg);
+}
+
+/* Dropdown content */
 .dropdown-content {
-  display: none;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  background: var(--background); /* Set the background color to match the window color */
-  color: var(--primary); /* Set the text color */
-  border-radius: 10px; /* Optional: round the edges of the dropdown content */
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background: var(--background);
+    color: var(--primary);
+    border-radius: 5px;
 }
 
 .dropdown-content > div,
 .dropdown-content > article {
-  padding: 1em;
-  border-top: 1px solid var(--primary); /* Match the border color with the primary color */
+    padding: 1em;
+    border-top: 1px solid var(--primary);
 }
 
-/* Optional: adjust dropdown content padding and margin */
 .dropdown-content > div,
 .dropdown-content > article {
-  padding: 1em;
-  margin: 1em 0;
+    padding: 1em;
+    margin: 1em 0;
 }
 
-/* Show the dropdown content when active */
 .dropdown-content.show {
-  display: block;
-  max-height: 1000px; /* Arbitrary high value to ensure full expansion */
-  overflow-y: auto; /* Make content scrollable if it exceeds max height */
+    display: block;
+    max-height: 1000px;
+    overflow-y: auto;
+    animation: slideDown 0.5s ease-out forwards;
 }
 
-
-/* Optional: style for animation */
 @keyframes slideDown {
-  from {
-    max-height: 0;
-  }
-  to {
-    max-height: 1000px; /* Arbitrary high value to ensure full expansion */
-  }
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 1000px;
+    }
 }
 
-.dropdown-content.show {
-  animation: slideDown 0.5s ease-out forwards;
+/* Add space between certification and recent work sections */
+.certifications,
+.recent-work {
+    margin-bottom: 2em;
 }
